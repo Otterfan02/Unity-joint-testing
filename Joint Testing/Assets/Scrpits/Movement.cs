@@ -30,6 +30,15 @@ public class Movement : MonoBehaviour
 
         // jump
         if (Input.GetKeyDown(KeyCode.Space))
-            rb.velocity = Vector2.up * jumpForce;  
+            rb.velocity = Vector2.up * jumpForce;
+        
+
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Blessed"))
+            collision.gameObject.GetComponent<AudioSource>().Play();
+    }
+
 }
