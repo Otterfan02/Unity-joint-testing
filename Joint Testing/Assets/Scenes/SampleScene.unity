@@ -1053,7 +1053,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.4942822
+  orthographic size: 8.348931
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3819,6 +3819,7 @@ GameObject:
   - component: {fileID: 1439092912}
   - component: {fileID: 1439092911}
   - component: {fileID: 1439092910}
+  - component: {fileID: 1439092915}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -3838,7 +3839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6e42dfecbbc8241a6987c4d2665d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  jumpForce: 100
   speed: 5000
 --- !u!50 &1439092911
 Rigidbody2D:
@@ -3955,6 +3956,26 @@ Transform:
   m_Father: {fileID: 84998014}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!231 &1439092915
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439092909}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 30.057999
+  m_DampingRatio: 0
+  m_Frequency: 1
 --- !u!1 &1453187111
 GameObject:
   m_ObjectHideFlags: 0

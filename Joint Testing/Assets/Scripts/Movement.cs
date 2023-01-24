@@ -9,11 +9,13 @@ public class Movement : MonoBehaviour
     public float speed;
 
     private Rigidbody2D rb;
+    private SpringJoint2D sj;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        sj = gameObject.GetComponent<SpringJoint2D>();
     }
 
     // Update is called once per frame
@@ -31,7 +33,12 @@ public class Movement : MonoBehaviour
         // jump
         if (Input.GetKeyDown(KeyCode.Space))
             rb.velocity = Vector2.up * jumpForce;
-        
+
+        if (Input.GetKeyDown(KeyCode.O))
+            sj.frequency = 100000;
+
+        if (Input.GetKeyDown(KeyCode.P))
+            sj.frequency = -100000;
 
     }
 
